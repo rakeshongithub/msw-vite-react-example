@@ -24,6 +24,10 @@ const UserList = () => {
     setSelectedUser(event.target.value);
   };
 
+  if (!Array.isArray(users)) {
+    return <></>;
+  }
+
   return (
     <Box sx={{ minWidth: 120, m: 5 }}>
       <Typography gutterBottom variant="h5" component="div">
