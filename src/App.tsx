@@ -2,6 +2,7 @@ import { Container, Divider } from "@mui/material";
 import CssBaseline from "@mui/material/CssBaseline";
 import UserList from "./components/UserLists";
 import PokemonList from "./components/PokemonList";
+import { Counter } from "./components/Counter";
 function App() {
   return (
     <>
@@ -10,6 +11,7 @@ function App() {
         <UserList />
         <Divider />
         <PokemonList />
+        <Counter />
       </Container>
     </>
   );

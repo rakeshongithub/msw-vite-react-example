@@ -5,6 +5,7 @@ import {
   useDispatch as useReduxDispatch,
   useSelector as useReduxSelector,
 } from "react-redux";
+import appMiddlewares from "./middlewares/appMiddlewares";
 
 // Create the store
 const setupStore = (preloadedState?: Partial<ReduxState>) => {
@@ -21,7 +22,7 @@ const setupStore = (preloadedState?: Partial<ReduxState>) => {
     middleware: (getDefaultMiddleware) => {
       return getDefaultMiddleware({
         serializableCheck: false,
-      });
+      }).concat(appMiddlewares);
     },
     devTools: process.env.NODE_ENV !== "production",
   });

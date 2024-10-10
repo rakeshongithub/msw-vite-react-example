@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { ReduxState } from "../store";
 
 export const counterSlice = createSlice({
   name: "counter",
@@ -15,9 +16,14 @@ export const counterSlice = createSlice({
   },
 });
 
+// Reducers
+export const counterReducer = counterSlice.reducer;
+
+// Actions
 export const { increment, decrement } = counterSlice.actions;
 
-export default counterSlice.reducer;
+// Selectors
+export const selectCount = (state: ReduxState) => state.counter.value;
 
 // Infer the `CounterState` and `AppDispatch` types from the store itself
 export type CounterState = ReturnType<typeof counterSlice.reducer>;

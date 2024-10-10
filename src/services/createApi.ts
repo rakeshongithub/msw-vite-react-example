@@ -14,7 +14,7 @@ export const createApiWithRetry = createApi({
    * If you call createApi more than once in your application, you will need to provide
    * a unique value each time. Defaults to 'api'.
    */
-  reducerPath: "api",
+  reducerPath: "rtkvite",
   /**
    * @see https://redux-toolkit.js.org/rtk-query/api/createApi#basequery
    * A bare bone baseQuery would just be `fetchBaseQuery({ baseUrl: BASE_URL })`
@@ -29,6 +29,5 @@ export const createApiWithRetry = createApi({
   //   refetchOnFocus: true,
   //   refetchOnReconnect: true,
   //   refetchOnMountOrArgChange: true,
-  //   retry: 1,
   //   keepUnusedDataFor: 5,
 });
